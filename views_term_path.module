@@ -1,8 +1,20 @@
 <?php
 
 /**
- * Implements of hook_views_api().
+ * @file
+ * Main file of the views term path module.
  */
-function views_term_path_views_api() {
-  return array('api' => 3);
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function views_term_path_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.views_term_path':
+      $output = '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Views Term Path provides a views field handler for display taxonomy term path.') . '</p>';
+      return $output;
+  }
 }

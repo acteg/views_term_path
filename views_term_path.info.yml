@@ -1,0 +1,6 @@
+type: module
+name: Views term path
+description: Views field handler for display taxonomy term path.
+core: 8.x
+dependencies:
+  - drupal:views
